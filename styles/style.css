@@ -1,0 +1,606 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* Colors */
+:root {
+  --primary-color: #00c194;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+  --primary-color-dark: #01ac84;
+  --primary-color-inactive: #e5e5e5;
+  --footer-color: #24334a;
+  --footer-color-dark: #1d2a3d;
+  --background-color: #f6f6f6;
+  --main-background-color: #f1f8f6;
+  --last-background-color: #f4fffd;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--background-color);
+}
+
+section#register,
+section#login {
+  background-image: url("../images/header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+section#register div.card-body,
+section#login div.card-body {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+section#register div.card-body button,
+section#login div.card-body button {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+}
+
+section#register div.card-body button:hover,
+section#login div.card-body button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color-dark);
+}
+
+section#register i,
+section#login i {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  background: var(--tertiary-color);
+}
+
+nav div ul li.active {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+nav div ul li.active a {
+  color: var(--primary-color) !important;
+}
+
+nav div ul li a {
+  color: var(--secondary-color) !important;
+  transition: 0.3s;
+}
+
+nav div ul li a:hover {
+  color: var(--primary-color) !important;
+}
+
+nav div.icons li {
+  border: 2px solid var(--primary-color-inactive);
+  border-radius: 50%;
+  position: relative;
+}
+
+nav div.icons li:before {
+  content: "0";
+  color: var(--tertiary-color);
+  background: var(--primary-color-inactive);
+  border-radius: 50%;
+  padding: 0px 5px;
+  position: absolute;
+  font-size: 10px;
+  top: -5px;
+  right: 0;
+}
+
+nav div.icons li i {
+  color: var(--primary-color-inactive);
+}
+
+nav div.icons li.active,
+nav div.icons li.active i {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+nav div.icons li.active:before {
+  content: "0";
+  color: var(--tertiary-color);
+  background: var(--primary-color);
+  border-radius: 50%;
+  padding: 0px 5px;
+  position: absolute;
+  font-size: 10px;
+  top: -5px;
+  right: 0;
+}
+
+nav div button {
+  background-color: var(--primary-color) !important;
+  color: var(--tertiary-color) !important;
+  border-radius: 30px !important;
+}
+
+nav div button.navbar-toggler {
+  color: var(--tertiary-color) !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+main {
+  background-color: var(--main-background-color);
+}
+
+main li button {
+  border: none !important;
+  background-color: var(--tertiary-color) !important;
+}
+
+main li button.active {
+  background-color: var(--primary-color) !important;
+  color: var(--tertiary-color) !important;
+}
+
+main form button {
+  background-color: var(--primary-color) !important;
+  color: var(--tertiary-color) !important;
+}
+
+main input,
+main select {
+  box-shadow: none !important;
+}
+
+main input {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+main select {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+main div.back-text {
+  background-image: url("../images/Properties.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 328px;
+  height: 60px;
+}
+
+section#properties-categories div.text h6 {
+  color: var(--primary-color);
+}
+
+section#properties-categories div.row div.card-categories {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  height: 88%;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+section#properties-categories div.row div.card-categories img {
+  background-color: var(--tertiary-color);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+section#properties-categories div.row div.card-categories i {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  -webkit-text-stroke: 0.5px var(--primary-color);
+  border-radius: 50%;
+  padding: 8px 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 0.5px var(--secondary-color);
+}
+
+section#properties-categories div.row div.card-categories.disable {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color)
+}
+
+section#properties-categories div.row div.card-categories.disable img {
+  background: #e1f8f3;
+}
+
+section#properties-categories div.row div.card-categories.disable i {
+  color: var(--secondary-color);
+}
+
+section#properties-categories div.text {
+  background-image: url("../images/Featured.png");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: center center;
+}
+
+section#properties div.text {
+  background-image: url("../images/Properties.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center bottom;
+}
+
+section#properties div.text h6 {
+  color: var(--primary-color);
+}
+
+section#properties div.row div.card-properties {
+  background-color: var(--tertiary-color);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+section#properties div.row div.card-properties span.for {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  color: var(--tertiary-color);
+  font-size: 14px;
+  width: 80px;
+  padding: 3px;
+  text-align: center;
+  background-color: var(--primary-color);
+  z-index: 2;
+}
+
+section#properties div.row div.card-properties img {
+  height: 200px;
+  object-fit: cover;
+}
+
+section#properties div.row div.card-properties span.price {
+  color: var(--tertiary-color);
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  left: 30px;
+  bottom: 170px;
+}
+
+section#properties div.row div.card-properties div.card-body span {
+  color: var(--primary-color);
+}
+
+section#properties div.row div.card-properties small i {
+  -webkit-text-stroke: 1px var(--secondary-color);
+}
+
+section#properties div.row div.card-properties div small.beds::before {
+  background-image: url("../images/beds.png");
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  margin-right: 2px;
+}
+
+section#properties div.row div.card-properties div small.baths::before {
+  background-image: url("../images/baths.png");
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  margin-right: 2px;
+}
+
+section#properties div.row div.card-properties div small.sqft::before {
+  background-image: url("../images/sqft.png");
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  margin-right: 2px;
+}
+
+section#agents div.text {
+  background-image: url("../images/Our\ Agents.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center bottom;
+}
+
+section#agents div.text h6 {
+  color: var(--primary-color);
+}
+
+section#agents div.row div.card-agents {
+  background-color: var(--tertiary-color);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+section#agents div.row div.card-agents small.listing {
+  position: absolute;
+  left: 30px;
+  bottom: 120px;
+  font-size: 14px;
+  padding: 3px 8px 3px 2px;
+  background-color: var(--tertiary-color);
+  z-index: 2;
+  display: flex;
+}
+
+section#agents div.row div.card-agents small.listing i {
+  -webkit-text-stroke: 2px var(--primary-color);
+}
+
+section#agents div.row div.card-agents small {
+  color: var(--primary-color);
+}
+
+section#agents div.row div.card-agents h6.phone {
+  color: var(--secondary-color);
+}
+
+section#agents div.row div.card-agents h6.phone i {
+  color: var(--primary-color);
+}
+
+section#who-we-are div h6 {
+  color: var(--primary-color);
+}
+
+section#who-we-are div h6 i {
+  -webkit-text-stroke: 4px var(--primary-color);
+}
+
+section#who-we-are div div.text-title {
+  background-image: url("../images/About.png");
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: top left;
+}
+
+section#who-we-are div div.text-title h2 {
+  width: 95%;
+}
+
+section#who-we-are div div.stats div i {
+  color: var(--primary-color);
+  border: 4px solid var(--primary-color);
+  border-radius: 20px;
+  font-size: 30px;
+  padding: 5px 20px;
+  line-height: 2;
+}
+
+section#who-we-are div div.stats h2 {
+  font-size: 38px;
+}
+
+section#who-we-are div div.stats h2 span {
+  color: var(--secondary-color);
+  font-size: 14px;
+  display: block;
+}
+
+section#who-we-are div button {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 0px;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section#who-we-are div img.vector {
+  position: absolute;
+  right: -5%;
+  z-index: -1;
+}
+
+section#who-we-are div img.vector-2 {
+  position: absolute;
+  bottom: -10%;
+  z-index: -1;
+}
+
+section#who-we-are div div.users {
+  background-color: var(--tertiary-color);
+  border-radius: 15px;
+  height: 130px;
+}
+
+section#who-we-are div div.users h5 i {
+  background-color: rgba(254, 194, 37, 1);
+  border-radius: 50%;
+  padding: 10px 15px;
+  color: var(--tertiary-color);
+}
+
+section#who-we-are div div.users span {
+  color: var(--primary-color);
+}
+
+section#apartments-plan div.text {
+  background-image: url("../images/Apartments.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center bottom;
+}
+
+section#apartments-plan div.text h6 {
+  color: var(--primary-color);
+}
+
+section#apartments-plan div div .info-plan {
+  background-color: var(--primary-color);
+}
+
+section#apartments-plan div div li a.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+section#apartments-plan div div li a {
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+section#apartments-plan div div li a:hover {
+  color: var(--primary-color);
+}
+
+section#partners div.text {
+  background-image: url("../images/Partners.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center center;
+}
+
+section#partners div.text h6 {
+  color: var(--primary-color);
+}
+
+section#become div div button {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 0px;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+footer {
+  background: var(--footer-color);
+  color: var(--tertiary-color);
+}
+
+footer div.copy {
+  background: var(--footer-color-dark);
+}
+
+footer div p {
+  font-size: 14px;
+  margin: 0;
+}
+
+footer div div.footer-logo i {
+  background: #2d4864;
+  padding: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+footer div div.footer-logo i:hover {
+  background: var(--primary-color);
+}
+
+footer div h3 {
+  position: relative;
+}
+
+footer div h3::after {
+  background: var(--primary-color);
+  position: absolute;
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  bottom: -8px;
+}
+
+footer div ul li {
+  transition: 0.3s;
+}
+
+footer div ul li:hover {
+  color: var(--primary-color);
+}
+
+footer div ul li a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+footer div ul li a:hover {
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+footer form input {
+  border-radius: 0px !important;
+}
+
+footer form input:focus {
+  box-shadow: none !important;
+}
+
+footer form button.btn {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.btn:hover {
+  background-color: var(--primary-color-dark) !important;
+  color: var(--tertiary-color) !important;
+}
+
+
+section#details button {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+section#details span {
+  color: var(--primary-color);
+}
+
+section#details small i {
+  -webkit-text-stroke: 1px var(--secondary-color);
+}
+
+section#details small.beds::before {
+  background-image: url("../images/beds.png");
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  margin-right: 2px;
+}
+
+section#details small.baths::before {
+  background-image: url("../images/baths.png");
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  margin-right: 2px;
+}
+
+section#details small.sqft::before {
+  background-image: url("../images/sqft.png");
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  margin-right: 2px;
+}
+
+section#details h2, section#details .type {
+  color: var(--primary-color);
+}

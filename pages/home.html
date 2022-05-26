@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Realmod</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid container-lg">
+        <a class="navbar-brand" href="#">
+          <img src="../images/logo.png" alt="logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active ms-lg-2">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown ms-lg-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Property
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">List of properties</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Apartments</a></li>
+                <li><a class="dropdown-item" href="#">Studio Home</a></li>
+                <li><a class="dropdown-item" href="#">Villa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="navbar-nav me-auto icons d-none d-lg-flex">
+            <li class="nav-item px-1 py-0 active"><a class="nav-link" href="#"><i class="bi bi-arrow-left-right"></i></a></li>
+            <li class="nav-item ms-lg-2 px-1 py-0"><a class="nav-link" href="#"><i class="bi bi-heart"></i></a></li>
+            <li class="nav-item ms-lg-2 px-1 py-0"><a class="nav-link" href="profile.html"><i class="bi bi-person-square"></i></a></li>
+            <li class="nav-item ms-lg-2 px-1 py-0"><a class="nav-link" href="#"><i class="bi bi-cart"></i></a></li>
+          </div>
+            <button class="btn" type="submit"><i class="bi bi-plus-circle me-2"></i>Add property</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container-fluid container-lg pt-3 ps-lg-5">
+        <div class="text pt-lg-5">
+          <div class="back-text">
+          </div>
+          <h1 class="d-none d-lg-block w-50 fw-bold">Find The Perfect Place to Live With your Family</h1>
+          <h1 class="d-lg-none fw-bold">Find The Perfect Place to Live With your Family</h1>
+        </div>
+        <div class="tabs-form w-75 d-none d-lg-block pt-3">
+          <ul class="nav" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="btn active px-3" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Buy</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn px-3" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Rent</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <form class="row row-cols-lg-auto g-0 align-items-center">
+                <div class="col-12">
+                  <div class="input-group">
+                    <input type="text" class="form-control border-0 py-2" id="inlineFormInputGroupUsername" placeholder="Enter keyword here..." />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <select class="select form-select border-0 py-2">
+                    <option selected>Select Location</option>
+                    <option value="1">California</option>
+                    <option value="2">Texas</option>
+                    <option value="3">Illinois</option>
+                    <option value="4">Florida</option>
+                    <option value="5">Kansas</option>
+                    <option value="6">New York</option>
+                    <option value="7">Utah</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn ms-lg-2"><i class="bi bi-search me-2"></i>Search</button>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <form class="row row-cols-lg-auto g-0 align-items-center">
+                <div class="col-12">
+                  <div class="input-group">
+                    <input type="text" class="form-control border-0" id="inlineFormInputGroupUsername" placeholder="Enter keyword here..." />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <select class="select form-select border-0">
+                    <option selected>Select Location</option>
+                    <option value="1">California</option>
+                    <option value="2">Texas</option>
+                    <option value="3">Illinois</option>
+                    <option value="4">Florida</option>
+                    <option value="5">Kansas</option>
+                    <option value="6">New York</option>
+                    <option value="7">Utah</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn ms-lg-2"><i class="bi bi-search me-2"></i>Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-form d-lg-none pt-3">
+          <ul class="nav" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="btn active px-3" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Buy</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn px-3" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Rent</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <form class="row row-cols-lg-auto g-0 align-items-center">
+                <div class="col-12">
+                  <div class="input-group">
+                    <input type="text" class="form-control border-0 py-2" id="inlineFormInputGroupUsername" placeholder="Enter keyword here..." />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <select class="select form-select border-0 py-2">
+                    <option selected>Select Location</option>
+                    <option value="1">California</option>
+                    <option value="2">Texas</option>
+                    <option value="3">Illinois</option>
+                    <option value="4">Florida</option>
+                    <option value="5">Kansas</option>
+                    <option value="6">New York</option>
+                    <option value="7">Utah</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn ms-lg-2 mt-2"><i class="bi bi-search me-2"></i>Search</button>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <form class="row row-cols-lg-auto g-0 align-items-center">
+                <div class="col-12">
+                  <div class="input-group">
+                    <input type="text" class="form-control border-0" id="inlineFormInputGroupUsername" placeholder="Enter keyword here..." />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <select class="select form-select border-0">
+                    <option selected>Select Location</option>
+                    <option value="1">California</option>
+                    <option value="2">Texas</option>
+                    <option value="3">Illinois</option>
+                    <option value="4">Florida</option>
+                    <option value="5">Kansas</option>
+                    <option value="6">New York</option>
+                    <option value="7">Utah</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn ms-lg-2"><i class="bi bi-search me-2"></i>Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        <img src="../images/header.png" alt="header" class="img-fluid d-none d-lg-block">
+    </main>
+
+    <section id="properties-categories">
+      <div class="container-fluid container-lg pt-5">
+        <div class="text text-center pt-5">
+          <h6 class="text-uppercase">properties</h6>
+          <div class="back-text"></div>
+          <h2 class="text-capitalize fw-bold">Featured listings</h2>
+        </div>
+        <div class="categories pt-5">
+          <div class="row row-cols-lg-4 g-3 text-center" id="property-options">
+            <div class="col-12">
+              <div class="card-categories active" id="parking">
+                <img src="../images/parking-area 1.png" alt="parking-area" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">parking speace</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-categories disable" id="pool">
+                <img src="../images/swimming-pool.png" alt="swimming-pool" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">swimming pool</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-categories disable" id="security">
+                <img src="../images/privat-security.png" alt="privat-security" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">privat security</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-categories disable" id="medical-center">
+                <img src="../images/medical-center.png" alt="medical-center" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">medical center</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-categories disable" id="library-area">
+                <img src="../images/library-area.png" alt="library-area" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">library area</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-categories disable" id="king-size-beds">
+                <img src="../images/king-size-beds.png" alt="king-size-beds" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">king size beds</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-categories disable" id="smart-home">
+                <img src="../images/smart-homes.png" alt="smart-homes" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">smart homes</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-categories disable" id="kids-playland">
+                <img src="../images/kids-playland.png" alt="kids-playland" class="my-3">
+                <h5 class="text-capitalize fw-bold mt-3 mb-5">kid's playland</h5>
+                <i class="bi bi-arrow-right m-3"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="properties">
+      <div class="container-fluid container-lg pt-5">
+        <div class="text text-center pt-5">
+          <h6 class="text-uppercase">our properties</h6>
+          <h2 class="text-capitalize fw-bold">Our featured properties</h2>
+        </div>
+        <div class="properties">
+          <div class="row row-cols-lg-3 g-3 pt-5" id="container-properties">
+        </div>
+      </div>
+    </section>
+
+    <section id="agents">
+      <div class="container-fluid container-lg pt-5">
+        <div class="text text-center pt-5">
+          <h6 class="text-uppercase">experties is here</h6>
+          <h2 class="h2 text-capitalize fw-bold">Our exclusive agents</h2>
+        </div>
+        <div class="agents">
+          <div class="row row-cols-lg-4 g-3 pt-5">
+            <div class="col-12">
+              <div class="card-agents card border-0">
+                <div class="card-body p-3">
+                  <img src="../images/agents1.png" alt="agent-1" class="card-img">
+                  <small class="listing fw-bold"><i class="bi bi-dot"></i>08 Listing</small>
+                    <h6 class="text-capitalize fw-bold pt-2">Andren Willium</h6>
+                    <small class="fw-bold">Sweet Home</small>
+                    <h6 class="pt-2 phone"><i class="bi bi-telephone-outbound me-2"></i>Call: +121 511 4522</h6>
+                  </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-agents card border-0">
+                <div class="card-body p-3">
+                  <img src="../images/agents2.png" alt="agent-2" class="card-img">
+                  <small class="listing fw-bold"><i class="bi bi-dot"></i>09 Listing</small>
+                    <h6 class="text-capitalize fw-bold pt-2">Polly Martzinger</h6>
+                    <small class="fw-bold">Sweet Home</small>
+                    <h6 class="pt-2 phone"><i class="bi bi-telephone-outbound me-2"></i>Call: +121 511 4522</h6>
+                  </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-agents card border-0">
+                <div class="card-body p-3">
+                  <img src="../images/agents3.png" alt="agent-3" class="card-img">
+                  <small class="listing fw-bold"><i class="bi bi-dot"></i>08 Listing</small>
+                    <h6 class="text-capitalize fw-bold pt-2">Sarah Boysen</h6>
+                    <small class="fw-bold">Marl Street</small>
+                    <h6 class="pt-2 phone"><i class="bi bi-telephone-outbound me-2"></i>Call: +121 511 4522</h6>
+                  </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-agents card border-0">
+                <div class="card-body p-3">
+                  <img src="../images/agents4.png" alt="agent-4" class="card-img">
+                  <small class="listing fw-bold"><i class="bi bi-dot"></i>08 Listing</small>
+                    <h6 class="text-capitalize fw-bold pt-2">Mac. Willium</h6>
+                    <small class="fw-bold">Eco Builder</small>
+                    <h6 class="pt-2 phone"><i class="bi bi-telephone-outbound me-2"></i>Call: +121 511 4522</h6>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="who-we-are">
+      <div class="container-fluid container-lg pt-5">
+        <div class="row row-cols-lg-2 g-1 pt-5 flex-lg-row flex-column-reverse">
+          <div class="col-12 d-none d-lg-block position-relative">
+            <img src="../images/Vector.png" alt="vector" class="vector">
+            <div class="row row-cols-lg-2">
+              <div class="col-12">
+                <img src="../images/section.png" alt="who-we-are" class="img-fluid">
+              </div>
+              <div class="col-12 mt-5">
+                <img src="../images/section1.png" alt="who-we-are" class="img-fluid">
+              </div>
+              <div class="col-12">
+                <img src="../images/section2.png" alt="who-we-are">
+              </div>
+              <div class="col-12 mt-5 users text-center">
+                <h5 class="text-start"><i class="bi bi-star-fill"></i></h5>
+                <img src="../images/users.png" alt="users">
+                <h6 class="text-black mt-2">15K <span class="reviews">+ Positive Reviews</span></h6>
+              </div>
+            </div>
+            <img src="../images/Vector2.png" alt="vector" class="vector-2">
+          </div>
+          <div class="col-12 px-5 mt-lg-0 mt-5">
+            <div class="text">
+              <div class="text-title">
+              <h6 class="fw-bold text-uppercase"><i class="bi bi-dot me-1"></i>who we are</h6>
+              <h2 class="fw-bold">We are Offering The Best
+                Real Esate Property For All</h2>
+              </div>
+                <p class="text-black-50">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, and going through the cites.</p>
+            </div>
+            <div class="pt-5">
+              <div class="stats d-flex justify-content-between">
+                <div class="people d-flex">
+                  <i class="bi bi-people me-3"></i>
+                  <h2 class="fw-bold">55K <span class="text-capitalize">satisfied people</span></h2>
+                </div>
+                <div class="verified d-flex">
+                  <i class="bi bi-patch-check-fill me-3"></i>
+                  <h2 class="fw-bold">11K <span>Verified property</span></h2>
+                </div>
+              </div>
+              <button class="btn mt-lg-5 mt-2">Contact With US</button>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apartments-plan">
+      <div class="container-fluid container-lg pt-5">
+        <div class="text text-center pt-5">
+          <h6 class="text-uppercase">apartment sketch</h6>
+          <h2 class="text-capitalize fw-bold">apartments plan</h2>
+        </div>
+        <div class="mt-lg-3 mt-5">
+          <ul
+            class="nav d-flex flex-column flex-lg-row text-center justify-content-lg-center p-5 pt-0"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="pills-the-studio-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-the-studio"
+                type="button"
+                role="tab"
+                aria-controls="pills-the-studio"
+                aria-selected="true"
+                >The Studio</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-deluxe-portion-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-deluxe-portion"
+                type="button"
+                role="tab"
+                aria-controls="pills-deluxe-portion"
+                aria-selected="false"
+                >Deluxe Portion</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-penthouse-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-penthouse"
+                type="button"
+                role="tab"
+                aria-controls="pills-penthouse"
+                aria-selected="false"
+                >Penthouse</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-top-garden-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-top-garden"
+                type="button"
+                role="tab"
+                aria-controls="pills-top-garden"
+                aria-selected="false"
+                >Top Garden</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-double-height-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-double-height"
+                type="button"
+                role="tab"
+                aria-controls="pills-double-height"
+                aria-selected="false"
+                >Double Height</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-the-studio"
+              role="tabpanel"
+              aria-labelledby="pills-the-studio-tab"
+              tabindex="0"
+            >
+            <div class="row row-cols-lg-2 g-3">
+              <div class="col-12">
+                <div class="p-5 text-white info-plan">
+                  <h3>The Studio</h3>
+                  <p class="py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                  <span class="pb-3 d-block">Total Area    ..............................................................    1800 Sq. Ft</span>
+                  <span class="pb-3 d-block">Bedroom    ...............................................................     120 Sq. Ft</span>
+                  <span class="pb-3 d-block">Bathroom    ...............................................................     35 Sq. Ft</span>
+                  <span class="pb-3 d-block">Smoking/Pets     .....................................................     Allowed</span>
+                  <span>Lounge    .....   .............................................................    50 Sq. Ft</span>
+                </div>
+              </div>
+              <div class="col-12">
+                <img src="../images/map.png" alt="map" class="img-fluid p-5">
+              </div>
+            </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-deluxe-portion"
+              role="tabpanel"
+              aria-labelledby="pills-deluxe-portion-tab"
+              tabindex="0"
+            >
+            <div class="row row-cols-lg-2 g-3">
+              <div class="col-12">
+                <div class="p-5 text-white info-plan">
+                  <h3>Deluxe Portion</h3>
+                  <p class="py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                  <span class="pb-3 d-block">Total Area    ..............................................................    2800 Sq. Ft</span>
+                  <span class="pb-3 d-block">Bedroom    ...............................................................     150 Sq. Ft</span>
+                  <span class="pb-3 d-block">Bathroom    ...............................................................     45 Sq. Ft</span>
+                  <span class="pb-3 d-block">Smoking/Pets     .....................................................     Allowed</span>
+                  <span>Lounge    .....   .............................................................    650 Sq. Ft</span>
+                </div>
+              </div>
+              <div class="col-12">
+                <img src="../images/map.png" alt="map" class="img-fluid p-5">
+              </div>
+            </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-penthouse"
+              role="tabpanel"
+              aria-labelledby="pills-penthouse-tab"
+              tabindex="0"
+            >
+            <div class="row row-cols-lg-2 g-3">
+              <div class="col-12">
+                <div class="p-5 text-white info-plan">
+                  <h3>Penthouse</h3>
+                  <p class="py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                  <span class="pb-3 d-block">Total Area    ..............................................................    3800 Sq. Ft</span>
+                  <span class="pb-3 d-block">Bedroom    ...............................................................     250 Sq. Ft</span>
+                  <span class="pb-3 d-block">Bathroom    ...............................................................     55 Sq. Ft</span>
+                  <span class="pb-3 d-block">Smoking/Pets     .....................................................     Allowed</span>
+                  <span>Lounge    .....   .............................................................    750 Sq. Ft</span>
+                </div>
+              </div>
+              <div class="col-12">
+                <img src="../images/map.png" alt="map" class="img-fluid p-5">
+              </div>
+            </div>
+            </div>
+            <div
+            class="tab-pane fade"
+            id="pills-top-garden"
+            role="tabpanel"
+            aria-labelledby="pills-top-garden-tab"
+            tabindex="0"
+          >
+          <div class="row row-cols-lg-2 g-3">
+            <div class="col-12">
+              <div class="p-5 text-white info-plan">
+                <h3>Top Garden</h3>
+                <p class="py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                <span class="pb-3 d-block">Total Area    ..............................................................    4000 Sq. Ft</span>
+                <span class="pb-3 d-block">Bedroom    ...............................................................     350 Sq. Ft</span>
+                <span class="pb-3 d-block">Bathroom    ...............................................................     70 Sq. Ft</span>
+                <span class="pb-3 d-block">Smoking/Pets     .....................................................     Allowed</span>
+                <span>Lounge    .....   .............................................................    800 Sq. Ft</span>
+              </div>
+            </div>
+            <div class="col-12">
+              <img src="../images/map.png" alt="map" class="img-fluid p-5">
+            </div>
+          </div>
+          </div>
+          <div
+          class="tab-pane fade"
+          id="pills-double-height"
+          role="tabpanel"
+          aria-labelledby="pills-double-height-tab"
+          tabindex="0"
+        >
+        <div class="row row-cols-lg-2 g-3">
+          <div class="col-12">
+            <div class="p-5 text-white info-plan">
+              <h3>Double Height</h3>
+              <p class="py-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              <span class="pb-3 d-block">Total Area    ..............................................................    6000 Sq. Ft</span>
+              <span class="pb-3 d-block">Bedroom    ...............................................................     550 Sq. Ft</span>
+              <span class="pb-3 d-block">Bathroom    ...............................................................     95 Sq. Ft</span>
+              <span class="pb-3 d-block">Smoking/Pets     .....................................................     Allowed</span>
+              <span>Lounge    .....   .............................................................    1050 Sq. Ft</span>
+            </div>
+          </div>
+          <div class="col-12">
+            <img src="../images/map.png" alt="map" class="img-fluid p-5">
+          </div>
+        </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="container-fluid container-lg pt-5">
+        <div class="text text-center pt-5">
+          <h6 class="text-uppercase">our partners</h6>
+          <h2 class="h2 fw-bold text-capitalize">meet our partners</h2>
+        </div>
+      </div>
+      <div class="row p-5 d-flex justify-content-evenly m-0">
+        <div class="col-lg-2 col-4">
+          <img src="../images/client-logo-1 (1).png" alt="client" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-4">
+          <img src="../images/Group.png" alt="client" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-4">
+          <img src="../images/Group (3).png" alt="client" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-4">
+          <img src="../images/Group (4).png" alt="client" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-4">
+          <img src="../images/client-logo-6.png" alt="client" class="img-fluid">
+        </div>
+      </div>
+    </section>
+
+    <section id="become">
+      <div class="container-fluid container-lg pt-5 pb-5 pb-lg-0">
+        <div class="row row-cols-lg-3 d-flex justify-content-evenly align-items-lg-end text-center">
+          <div class="col-12 col-lg-3">
+            <img src="../images/Man Image.png" alt="become" class="img-fluid">
+          </div>
+          <div class="text col-12 col-lg-6">
+            <h2 class="fw-bold">Become a Real Estate Agent</h2>
+            <p>We only work with the best companies around the globe to survey</p>
+          </div>
+          <div class="col-12 col-lg-2">
+            <button class="btn text-capitalize mb-lg-4">Register now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid container-lg pt-5">
+        <div class="row row-cols-lg-4 g-3">
+          <div class="col-12 col-lg-4 px-lg-5 pt-0 pb-5 footer-logo">
+            <img src="../images/Logo (1).png" alt="logo-footer">
+            <p class="pb-3">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.</p>
+            <i class="me-1 bi bi-twitter"></i>
+            <i class="me-1 bi bi-facebook"></i>
+            <i class="me-1 bi bi-linkedin"></i>
+            <i class="me-1 bi bi-instagram"></i>
+            <i class="me-1 bi bi-pinterest"></i>
+            <i class="me-1 bi bi-skype"></i>
+          </div>
+          <div class="col-12 col-lg-3">
+            <h3 class="fw-bold text-capitalize mb-3 pb-2">Quick links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Propery</a></li>
+              <li><a href="#">Contract</a></li>
+              <li><a href="#">Blog Articles</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <h3 class="fw-bold mb-3 pb-2">Contact us</h2>
+            <span class="d-block"><i class="bi bi-geo-alt me-3"></i>121 King St, Melbourne 
+              Australia</span>
+              <span class="d-block mt-3"><i class="bi bi-telephone-inbound me-3"></i>+1 (500) 250-6969 </span>
+              <span class="d-block mt-3"><i class="bi bi-envelope me-3"></i>Support@urmail.net</span>
+          </div>
+          <div class="col-12 col-lg-2">
+            <h3 class="fw-bold mb-3 pb-2">Newsletter</h3>
+            <form>
+              <input type="email" class="form-control" placeholder="Email" />
+              <button class="btn mt-2 px-3">
+                Subscribe
+              </button>
+              <span class="d-block mt-2">We naver Span You!</span>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copy py-3 text-center">
+        <span>&copy; 2022 Realmod - Buy or Rent. All rights reserved.</s>
+      </div>
+    </footer>
+    <script src="../scripts/properties.js" type="module"></script>t
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
